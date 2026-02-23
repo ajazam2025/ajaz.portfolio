@@ -17,7 +17,8 @@ def get_scholar_data():
         return data
     except Exception as e:
         return None
-        import streamlit as st
+
+import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
