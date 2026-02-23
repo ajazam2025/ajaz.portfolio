@@ -1,8 +1,13 @@
-# Ajaz Ahmad Mir — Research Portfolio
+# Ajaz Ahmad Mir — Premium Academic Portfolio
 
-Streamlit-based academic portfolio.
+Interactive Streamlit academic website with navigation, charts,
+publications, and CV.
 
 ## Run locally
 
 pip install -r requirements.txt  
 streamlit run app.py
+
+## Deploy
+
+Use Streamlit Community Cloud.
