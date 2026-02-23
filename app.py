@@ -1,4 +1,23 @@
-import streamlit as st
+from scholarly import scholarly
+import time
+
+@st.cache_data(ttl=86400)  # cache for 24 hours
+def get_scholar_data():
+    try:
+        author = scholarly.search_author_id("90WNMHwAAAAJ")
+        author = scholarly.fill(author)
+
+        data = {
+            "name": author.get("name", ""),
+            "citations": author.get("citedby", 0),
+            "hindex": author.get("hindex", 0),
+            "i10index": author.get("i10index", 0),
+            "publications": len(author.get("publications", [])),
+        }
+        return data
+    except Exception as e:
+        return None
+        import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
