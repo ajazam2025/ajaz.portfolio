@@ -17,14 +17,12 @@ def get_scholar_data():
         author = scholarly.search_author_id("90WNMHwAAAAJ")
         author = scholarly.fill(author)
 
-        data = {
-            "name": author.get("name", ""),
+        return {
             "citations": author.get("citedby", 0),
             "hindex": author.get("hindex", 0),
             "i10index": author.get("i10index", 0),
             "publications": len(author.get("publications", [])),
         }
-        return data
     except Exception:
         return None
 
@@ -33,12 +31,11 @@ st.sidebar.title("🧭 Navigation")
 page = st.sidebar.radio(
     "Go to",
     ["🏠 Home", "🎓 Education", "📚 Publications",
-     "📊 Research Metrics", "🛠 Skills", "📄 CV"]
+     "📊 Research Metrics", "📄 CV"]
 )
 
 st.sidebar.markdown("---")
 st.sidebar.markdown("### 📬 Contact")
-
 st.sidebar.markdown("📧 ajazam.ce.21@nitj.ac.in")
 st.sidebar.markdown("📧 ajaz1@ualberta.ca")
 st.sidebar.markdown("📧 gid.ajaz@gmail.com")
@@ -55,6 +52,7 @@ st.sidebar.markdown(
 # ================= HOME =================
 if page == "🏠 Home":
 
+    # ===== HEADER =====
     col1, col2 = st.columns([1, 3])
 
     with col1:
@@ -82,7 +80,6 @@ if page == "🏠 Home":
     st.subheader("📈 Academic Snapshot")
 
     scholar_data = get_scholar_data()
-
     m1, m2, m3, m4 = st.columns(4)
 
     if scholar_data:
@@ -95,9 +92,84 @@ if page == "🏠 Home":
         m2.metric("Citations", "—")
         m3.metric("h-index", "—")
         m4.metric("i10-index", "—")
-        st.warning("Google Scholar data temporarily unavailable.")
 
     st.success("✅ Open to Postdoctoral Positions and Research Collaborations")
+
+    st.markdown("---")
+
+    # ===== PATENT =====
+    st.header("🧪 Patent & Industrial Design")
+
+    st.markdown("""
+    **Next-Gen Hydraulic Lab Trolley with Precision Control and Instrument Integration**  
+    Design No.: 475322-001, Class: 10-04  
+    Registered with the Patent Office, Government of India  
+    Date of Registration: 29 September 2025  
+    Date of Issue: 24 December 2025  
+
+    **Co-inventors:** Shakeel Ahmad Rather, Mahesh Patel,  
+    Satyender Singh, Shailza Sharma  
+
+    **Institutional Collaboration:**  
+    Dr B R Ambedkar National Institute of Technology Jalandhar and ADK Instruments
+    """)
+
+    # ===== PROJECTS =====
+    st.header("🚀 Projects Assisted")
+
+    st.markdown("""
+    **SPARC, MHRD, Govt. of India**  
+    AI/ML-driven flood prediction and hazard mapping in Himalayan regions  
+    **Funding:** ₹60 Lakhs
+    """)
+
+    # ===== POSTERS =====
+    st.header("🖼 Poster Presentations")
+
+    st.markdown("""
+    • University of Alberta (2025): Water Quality Index using PCA + hybrid ML  
+    • CSCE, University of Alberta (2025): Sediment transport modelling using experimental + ensemble ML
+    """)
+
+    # ===== CONFERENCES =====
+    st.header("🎤 Conferences & Workshops")
+
+    st.markdown("""
+    • IAHR-APD, IIT Madras (2022)  
+    • IAHR Young Professionals Congress (2022)  
+    • Hydraulics Measurement Techniques — NIT Rourkela (2024)  
+    • Urban Water Management — GNDEC Ludhiana (2023)  
+    • Machine Learning with Python — NIT Jalandhar (2022)
+    """)
+
+    # ===== BOOK CHAPTERS =====
+    st.header("📖 Book Chapters")
+
+    st.markdown("""
+    • Springer Nature (2025): Technological developments in river morphology  
+    • Geoenvironmental Engineering (2025): Hydrogeological study of soil and water contamination
+    """)
+
+    # ===== ACHIEVEMENTS =====
+    st.header("🏆 Achievements & Fellowships")
+
+    st.markdown("""
+    • GATE Qualified (2019) — Score: 463  
+    • ANRF / SERB Overseas Visiting Fellowship — $2000/month  
+    • PhD Fellowship — NIT Jalandhar (₹42,000/month)  
+    • MTech GATE Fellowship — NIT Srinagar (₹12,400/month)  
+    • Minority Scholarship — University of Kashmir (4 years)  
+    • Session Chair — ICIDEAIA-2025 (Human-centered AI)
+    """)
+
+    # ===== SKILLS =====
+    st.header("🛠 Skills")
+
+    st.markdown("""
+    **Technical:** Machine Learning, Hydraulics, ANSYS, MATLAB, WaterGems  
+    **Programming:** Python, MATLAB  
+    **Soft Skills:** Teaching, Project Writing, Team Work
+    """)
 
 # ================= EDUCATION =================
 elif page == "🎓 Education":
@@ -126,49 +198,18 @@ elif page == "🎓 Education":
 elif page == "📚 Publications":
 
     st.title("📚 Publications")
-
-    refs = [
-        "Mir AA, Mushtaq J, Dar AQ, Patel M (2023) A quantitative investigation of methane gas and solid waste management in mountainous Srinagar city—A case study. Journal of Material Cycles and Waste Management. https://doi.org/10.1007/s10163-022-01516-4",
-
-        "Mir AA, Patel M (2024a) Machine learning approaches for adequate prediction of flow resistance in alluvial channels with bedforms. Water Science and Technology 89:290–318. https://doi.org/10.2166/wst.2023.396",
-
-        "Mir AA, Patel M (2024b) A Comprehensive Review on Sediment Transport, Flow Dynamics, and Hazards in Steep Channels. Journal of Water Management Modeling 32:1–52. https://doi.org/10.14796/JWMM.C517",
-
-        "Mir AA, Patel M (2023) Research possibilities into the dynamics and bed morphology of steep mountain channels. Proceedings of the 3rd IAHR Young Professionals Congress. pp 116–117",
-
-        "Mir AA, Patel M (2025) Optimizing bed shear stress prediction in open flow channels: an investigation of heuristic machine learning techniques. Natural Hazards. https://doi.org/10.1007/S11069-025-07154-X",
-
-        "Mir AA, Patel M, Albalawi F, et al (2024) A comparative ensemble approach to bedload prediction using metaheuristic machine learning. Scientific Reports 14:25725. https://doi.org/10.1038/S41598-024-75118-5",
-
-        "Bassi A, Mir AA, Kumar B, Patel M (2023) A comprehensive study of various regressions and deep learning approaches for the prediction of friction factor in mobile bed channels. Journal of Hydroinformatics 25:2500–2521. https://doi.org/10.2166/HYDRO.2023.246",
-
-        "Patel M, Ahmad Mir A, Kumar B (2022) A critical review on flow over fluvial bed forms and research directions. Proceedings of the 23rd IAHR-APD Congress 2022, IIT Madras, India",
-
-        "Rather SA, Mir AA, Kapoor K, Patel M (2025) Assessment of technological developments in river morphology analysis: A comprehensive review. Lecture Notes in Civil Engineering 560:101–116. https://doi.org/10.1007/978-981-97-8895-8_7",
-
-        "Sankalp M, Gondwal A, Agnihotri AK, et al (2024) Hydrogeological study of contamination of soil and water in the vicinity of municipal dumping ground: A case study. Lecture Notes in Civil Engineering 508:219–235. https://doi.org/10.1007/978-981-97-3823-6_19",
-
-        "Singh R, Tipu RK, Mir AA, Patel M (2024) Predictive modelling of flexural strength in recycled aggregate-based concrete. Iranian Journal of Science and Technology. https://doi.org/10.1007/S40996-024-01502-W",
-
-        "Kumar R, Rathore A, Singh R, et al (2024) Prognosis of flow of fly ash and blast furnace slag-based concrete. Asian Journal of Civil Engineering 25:2483–2497. https://doi.org/10.1007/s42107-023-00922-9",
-    ]
-
-    for i, ref in enumerate(refs, 1):
-        st.markdown(f"**{i}.** {ref}")
+    st.info("See Google Scholar for complete and live publication list.")
 
 # ================= RESEARCH METRICS =================
 elif page == "📊 Research Metrics":
 
     st.title("📊 Research Metrics")
 
-    # Publications per year chart
     data = {
         "Year": ["2022", "2023", "2024", "2025"],
         "Publications": [2, 3, 4, 1],
     }
     df = pd.DataFrame(data)
-
-    st.subheader("📈 Publications by Year")
 
     fig, ax = plt.subplots()
     ax.bar(df["Year"], df["Publications"])
@@ -176,20 +217,6 @@ elif page == "📊 Research Metrics":
     ax.set_ylabel("Publications")
     ax.set_title("Research Productivity")
     st.pyplot(fig)
-
-# ================= SKILLS =================
-elif page == "🛠 Skills":
-
-    st.title("🛠 Skills")
-
-    st.subheader("Technical")
-    st.write("Machine Learning, Hydraulics, ANSYS, MATLAB, WaterGems")
-
-    st.subheader("Programming")
-    st.write("Python, MATLAB")
-
-    st.subheader("Soft Skills")
-    st.write("Teaching, Project Writing, Team Work")
 
 # ================= CV =================
 elif page == "📄 CV":
