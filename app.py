@@ -41,12 +41,8 @@ st.sidebar.markdown("📧 gid.ajaz@gmail.com")
 st.sidebar.markdown("📱 +91-7006231956")
 
 st.sidebar.markdown("### 🔗 Profiles")
-st.sidebar.markdown(
-    "[🎓 Google Scholar](https://scholar.google.ca/citations?user=90WNMHwAAAAJ&hl=en&oi=ao)"
-)
-st.sidebar.markdown(
-    "[🆔 ORCID](https://orcid.org/0000-0002-4164-4027)"
-)
+st.sidebar.markdown("[🎓 Google Scholar](https://scholar.google.ca/citations?user=90WNMHwAAAAJ&hl=en&oi=ao)")
+st.sidebar.markdown("[🆔 ORCID](https://orcid.org/0000-0002-4164-4027)")
 
 # ================= HOME =================
 if page == "🏠 Home":
@@ -90,14 +86,8 @@ if page == "🏠 Home":
     with left:
         st.image("profile.png.png", width=190)
 
-        st.markdown(
-            "<div class='name'>Ajaz Ahmad Mir</div>",
-            unsafe_allow_html=True,
-        )
-        st.markdown(
-            "<div class='role'>PhD Research Scholar</div>",
-            unsafe_allow_html=True,
-        )
+        st.markdown("<div class='name'>Ajaz Ahmad Mir</div>", unsafe_allow_html=True)
+        st.markdown("<div class='role'>PhD Research Scholar</div>", unsafe_allow_html=True)
 
         st.markdown("""
         **University of Alberta**  
@@ -107,22 +97,14 @@ if page == "🏠 Home":
         st.markdown("📧 gid.ajaz@gmail.com")
         st.markdown("📱 +91-7006231956")
 
-        st.markdown(
-            "[🎓 Google Scholar](https://scholar.google.ca/citations?user=90WNMHwAAAAJ&hl=en&oi=ao)"
-        )
-        st.markdown(
-            "[🆔 ORCID](https://orcid.org/0000-0002-4164-4027)"
-        )
+        st.markdown("[🎓 Google Scholar](https://scholar.google.ca/citations?user=90WNMHwAAAAJ&hl=en&oi=ao)")
+        st.markdown("[🆔 ORCID](https://orcid.org/0000-0002-4164-4027)")
 
     # ---------- RIGHT ----------
     with right:
 
-        st.markdown(
-            "<div class='section-title'>About me</div>",
-            unsafe_allow_html=True,
-        )
+        st.markdown("<div class='section-title'>About me</div>", unsafe_allow_html=True)
 
-        # ✅ YOUR UPDATED TEXT
         st.markdown(
             """
             <div class='about-text'>
@@ -140,10 +122,7 @@ if page == "🏠 Home":
         colA, colB = st.columns(2, gap="small")
 
         with colA:
-            st.markdown(
-                "<div class='section-title'>Interests</div>",
-                unsafe_allow_html=True,
-            )
+            st.markdown("<div class='section-title'>Interests</div>", unsafe_allow_html=True)
             st.markdown("""
             • Experimental Hydraulics  
             • Open Channel Flow  
@@ -155,10 +134,7 @@ if page == "🏠 Home":
             """)
 
         with colB:
-            st.markdown(
-                "<div class='section-title'>Education</div>",
-                unsafe_allow_html=True,
-            )
+            st.markdown("<div class='section-title'>Education</div>", unsafe_allow_html=True)
             st.markdown("""
             🎓 **PhD, Water Resources Engineering**  
             NIT Jalandhar, 2022–Present  
@@ -188,6 +164,18 @@ if page == "🏠 Home":
         m3.metric("h-index", "—")
         m4.metric("i10-index", "—")
 
+    # ===== FEATURED PUBLICATIONS =====
+    st.markdown("---")
+    st.header("⭐ Featured Publications")
+
+    st.markdown("""
+**Mir AA, Patel M (2025).** Optimizing bed shear stress prediction in open flow channels. *Natural Hazards* (SCI, IF 4.0)
+
+**Mir AA, Patel M, Albalawi F, Bajaj M, Tuka MB (2024).** Comparative ensemble approach to bedload prediction. *Scientific Reports* (SCI, IF 4.3)
+
+**Mir AA, Patel M (2024).** Machine learning prediction of flow resistance in alluvial channels. *Water Science & Technology* (SCIE, IF 2.7)
+""")
+
     st.success("✅ Open to Postdoctoral Positions and Research Collaborations")
 
 # ================= EDUCATION =================
@@ -205,28 +193,37 @@ Ph.D. Water Resources Engineering
 """)
 
 # ================= PUBLICATIONS =================
-# ================= PUBLICATIONS =================
+elif page == "📚 Publications":
+
+   # ================= PUBLICATIONS =================
 elif page == "📚 Publications":
 
     st.title("📚 Publications")
 
-    st.markdown("""
-• **Ajaz Ahmad Mir, Mahesh Patel.** Optimizing bed shear stress prediction in open flow channels: an investigation of heuristic machine learning techniques. *Natural Hazards*, SCI (IF 4.0), 2025.
+    st.caption("Complete peer-reviewed journal publications")
 
-• **Ajaz Ahmad Mir, Mahesh Patel, Fahad Albalawi, Mohit Bajaj, Milkias Berhanu Tuka.** A comparative ensemble approach to bedload prediction using metaheuristic machine learning. *Scientific Reports*, SCI (IF 4.3), 2024.
+    publications = [
+        "Ajaz Ahmad Mir, Mahesh Patel (2025). Optimizing bed shear stress prediction in open flow channels: an investigation of heuristic machine learning techniques. Natural Hazards (SCI, IF 4.0).",
 
-• **Ajaz Ahmad Mir, Mahesh Patel.** Machine learning approaches for adequate prediction of flow resistance in alluvial channels with bedforms. *Water Science and Technology*, SCIE (IF 2.7), 2024.
+        "Ajaz Ahmad Mir, Mahesh Patel, Fahad Albalawi, Mohit Bajaj, Milkias Berhanu Tuka (2024). A comparative ensemble approach to bedload prediction using metaheuristic machine learning. Scientific Reports (SCI, IF 4.3).",
 
-• **Ajaz Ahmad Mir, Mahesh Patel.** A comprehensive review on sediment transport, flow dynamics, and hazards in steep channels. *Journal of Water Management Modeling*, ESCI, 2024.
+        "Ajaz Ahmad Mir, Mahesh Patel (2024). Machine learning approaches for adequate prediction of flow resistance in alluvial channels with bedforms. Water Science & Technology (SCIE, IF 2.7).",
 
-• **Ajaz Ahmad Mir, Jasir Mushtaq, Abdul Qayoom Dar, Mahesh Patel.** A quantitative investigation of methane gas and solid waste management in mountainous Srinagar city — A case study. *Journal of Material Cycles and Waste Management*, SCI (IF 3.2), 2022.
+        "Ajaz Ahmad Mir, Mahesh Patel (2024). A comprehensive review on sediment transport, flow dynamics, and hazards in steep channels. Journal of Water Management Modeling (ESCI).",
 
-• **Akshita Bassi, Ajaz Ahmad Mir, Bimlesh Kumar, Mahesh Patel.** A comprehensive study of various regressions and deep learning approaches for prediction of friction factor in mobile bed channels. *Journal of Hydroinformatics*, SCI (IF 2.7), 2023.
+        "Ajaz Ahmad Mir, Jasir Mushtaq, Abdul Qayoom Dar, Mahesh Patel (2022). A quantitative investigation of methane gas and solid waste management in mountainous Srinagar city — A case study. Journal of Material Cycles and Waste Management (SCI, IF 3.2).",
 
-• **Rahul Kumar, Ayush Rathore, Rajwinder Singh, Ajaz Ahmad Mir, Rupesh Kumar Tipu, Mahesh Patel.** Prognosis of flow of fly ash and blast furnace slag-based concrete: leveraging advanced machine learning algorithms. *Asian Journal of Civil Engineering*, SCOPUS, 2023.
+        "Akshita Bassi, Ajaz Ahmad Mir, Bimlesh Kumar, Mahesh Patel (2023). A comprehensive study of various regressions and deep learning approaches for prediction of friction factor in mobile bed channels. Journal of Hydroinformatics (SCI, IF 2.7).",
 
-• **Rajwinder Singh, Rupesh Kumar Tipu, Ajaz Ahmad Mir, Mahesh Patel.** Predictive modelling of flexural strength in recycled aggregate-based concrete: machine learning and global sensitivity analysis. *Iranian Journal of Science and Technology*, SCI (IF 1.6), 2024.
-    """)
+        "Rahul Kumar, Ayush Rathore, Rajwinder Singh, Ajaz Ahmad Mir, Rupesh Kumar Tipu, Mahesh Patel (2023). Prognosis of flow of fly ash and blast furnace slag-based concrete using advanced machine learning algorithms. Asian Journal of Civil Engineering (SCOPUS).",
+
+        "Rajwinder Singh, Rupesh Kumar Tipu, Ajaz Ahmad Mir, Mahesh Patel (2024). Predictive modelling of flexural strength in recycled aggregate-based concrete using machine learning and global sensitivity analysis. Iranian Journal of Science and Technology (SCI, IF 1.6).",
+    ]
+
+    for i, pub in enumerate(publications, 1):
+        st.markdown(f"**{i}.** {pub}")
+
+    st.info("🔗 For live citation updates, visit my Google Scholar profile.")
 
 # ================= RESEARCH METRICS =================
 elif page == "📊 Research Metrics":
