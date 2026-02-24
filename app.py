@@ -16,7 +16,6 @@ def get_scholar_data():
     try:
         author = scholarly.search_author_id("90WNMHwAAAAJ")
         author = scholarly.fill(author)
-
         return {
             "citations": author.get("citedby", 0),
             "hindex": author.get("hindex", 0),
@@ -52,7 +51,6 @@ st.sidebar.markdown(
 # ================= HOME =================
 if page == "🏠 Home":
 
-    # ===== HEADER =====
     col1, col2 = st.columns([1, 3])
 
     with col1:
@@ -99,106 +97,115 @@ if page == "🏠 Home":
 
     # ===== PATENT =====
     st.header("🧪 Patent & Industrial Design")
-
     st.markdown("""
-    **Next-Gen Hydraulic Lab Trolley with Precision Control and Instrument Integration**  
-    Design No.: 475322-001, Class: 10-04  
-    Registered with the Patent Office, Government of India  
-    Date of Registration: 29 September 2025  
-    Date of Issue: 24 December 2025  
+**Next-Gen Hydraulic Lab Trolley with Precision Control and Instrument Integration**  
+Design No.: 475322-001, Class: 10-04  
+Registered with the Patent Office, Government of India  
+Date of Registration: 29 September 2025  
+Date of Issue: 24 December 2025  
 
-    **Co-inventors:** Shakeel Ahmad Rather, Mahesh Patel,  
-    Satyender Singh, Shailza Sharma  
+**Co-inventors:** Shakeel Ahmad Rather, Mahesh Patel,  
+Satyender Singh, Shailza Sharma  
 
-    **Institutional Collaboration:**  
-    Dr B R Ambedkar National Institute of Technology Jalandhar and ADK Instruments
-    """)
+**Institutional Collaboration:**  
+Dr B R Ambedkar National Institute of Technology Jalandhar and ADK Instruments
+""")
 
-    # ===== PROJECTS =====
+    # ===== PROJECT =====
     st.header("🚀 Projects Assisted")
-
     st.markdown("""
-    **SPARC, MHRD, Govt. of India**  
-    AI/ML-driven flood prediction and hazard mapping in Himalayan regions  
-    **Funding:** ₹60 Lakhs
-    """)
+**SPARC, MHRD, Govt. of India**  
+AI/ML-driven flood prediction and hazard mapping in Himalayan regions  
+**Funding:** ₹60 Lakhs
+""")
 
     # ===== POSTERS =====
     st.header("🖼 Poster Presentations")
-
     st.markdown("""
-    • University of Alberta (2025): Water Quality Index using PCA + hybrid ML  
-    • CSCE, University of Alberta (2025): Sediment transport modelling using experimental + ensemble ML
-    """)
+• University of Alberta (2025): Water Quality Index using PCA + hybrid ML  
+• CSCE, University of Alberta (2025): Sediment transport modelling using experimental + ensemble ML
+""")
 
     # ===== CONFERENCES =====
     st.header("🎤 Conferences & Workshops")
-
     st.markdown("""
-    • IAHR-APD, IIT Madras (2022)  
-    • IAHR Young Professionals Congress (2022)  
-    • Hydraulics Measurement Techniques — NIT Rourkela (2024)  
-    • Urban Water Management — GNDEC Ludhiana (2023)  
-    • Machine Learning with Python — NIT Jalandhar (2022)
-    """)
+• IAHR-APD, IIT Madras (2022)  
+• IAHR Young Professionals Congress (2022)  
+• Hydraulics Measurement Techniques — NIT Rourkela (2024)  
+• Urban Water Management — GNDEC Ludhiana (2023)  
+• Machine Learning with Python — NIT Jalandhar (2022)
+""")
 
     # ===== BOOK CHAPTERS =====
     st.header("📖 Book Chapters")
-
     st.markdown("""
-    • Springer Nature (2025): Technological developments in river morphology  
-    • Geoenvironmental Engineering (2025): Hydrogeological study of soil and water contamination
-    """)
+• Springer Nature (2025): Technological developments in river morphology  
+• Geoenvironmental Engineering (2025): Hydrogeological study of soil and water contamination
+""")
 
     # ===== ACHIEVEMENTS =====
     st.header("🏆 Achievements & Fellowships")
-
     st.markdown("""
-    • GATE Qualified (2019) — Score: 463  
-    • ANRF / SERB Overseas Visiting Fellowship — $2000/month  
-    • PhD Fellowship — NIT Jalandhar (₹42,000/month)  
-    • MTech GATE Fellowship — NIT Srinagar (₹12,400/month)  
-    • Minority Scholarship — University of Kashmir (4 years)  
-    • Session Chair — ICIDEAIA-2025 (Human-centered AI)
-    """)
+• GATE Qualified (2019) — Score: 463  
+• ANRF / SERB Overseas Visiting Fellowship — $2000/month  
+• PhD Fellowship — NIT Jalandhar (₹42,000/month)  
+• MTech GATE Fellowship — NIT Srinagar (₹12,400/month)  
+• Minority Scholarship — University of Kashmir (4 years)  
+• Session Chair — ICIDEAIA-2025 (Human-centered AI)
+""")
 
     # ===== SKILLS =====
     st.header("🛠 Skills")
-
     st.markdown("""
-    **Technical:** Machine Learning, Hydraulics, ANSYS, MATLAB, WaterGems  
-    **Programming:** Python, MATLAB  
-    **Soft Skills:** Teaching, Project Writing, Team Work
-    """)
+**Technical:** Machine Learning, Hydraulics, ANSYS, MATLAB, WaterGems  
+**Programming:** Python, MATLAB  
+**Soft Skills:** Teaching, Project Writing, Team Work
+""")
 
 # ================= EDUCATION =================
 elif page == "🎓 Education":
 
     st.title("🎓 Education")
-
     st.markdown("""
-    **University of Alberta, Canada**  
-    Overseas Visiting Doctoral Fellow (ANRF/OVDF)  
-    *Sept 2024 – Aug 2025*
+**University of Alberta, Canada**  
+Overseas Visiting Doctoral Fellow (ANRF/OVDF)  
+*Sept 2024 – Aug 2025*
 
-    **Dr B R Ambedkar NIT Jalandhar, India**  
-    Ph.D. Water Resources Engineering  
-    *2022 – Ongoing*
+**Dr B R Ambedkar NIT Jalandhar, India**  
+Ph.D. Water Resources Engineering  
+*2022 – Ongoing*
 
-    **NIT Srinagar, India**  
-    M.Tech Water Resource Engineering — CGPA: 7.23  
-    *2019 – 2021*
+**NIT Srinagar, India**  
+M.Tech Water Resource Engineering — CGPA: 7.23  
+*2019 – 2021*
 
-    **University of Kashmir, India**  
-    B.E. Civil Engineering — 76.6%  
-    *2014 – 2019*
-    """)
+**University of Kashmir, India**  
+B.E. Civil Engineering — 76.6%  
+*2014 – 2019*
+""")
 
 # ================= PUBLICATIONS =================
 elif page == "📚 Publications":
 
     st.title("📚 Publications")
-    st.info("See Google Scholar for complete and live publication list.")
+
+    st.markdown("""
+• **Ajaz Ahmad Mir, Mahesh Patel.** Optimizing bed shear stress prediction in open flow channels: an investigation of heuristic machine learning techniques. *Natural Hazards*, SCI (IF 4.0), 2025.
+
+• **Ajaz Ahmad Mir, Mahesh Patel, Fahad Albalawi, Mohit Bajaj, Milkias Berhanu Tuka.** A comparative ensemble approach to bedload prediction using metaheuristic machine learning. *Scientific Reports*, SCI (IF 4.3), 2024.
+
+• **Ajaz Ahmad Mir, Mahesh Patel.** Machine learning approaches for adequate prediction of flow resistance in alluvial channels with bedforms. *Water Science and Technology*, SCIE (IF 2.7), 2024.
+
+• **Ajaz Ahmad Mir, Mahesh Patel.** A comprehensive review on sediment transport, flow dynamics, and hazards in steep channels. *Journal of Water Management Modeling*, ESCI, 2024.
+
+• **Ajaz Ahmad Mir, Jasir Mushtaq, Abdul Qayoom Dar, Mahesh Patel.** A quantitative investigation of methane gas and solid waste management in mountainous Srinagar city — A case study. *Journal of Material Cycles and Waste Management*, SCI (IF 3.2), 2022.
+
+• **Akshita Bassi, Ajaz Ahmad Mir, Bimlesh Kumar, Mahesh Patel.** A comprehensive study of various regressions and deep learning approaches for prediction of friction factor in mobile bed channels. *Journal of Hydroinformatics*, SCI (IF 2.7), 2023.
+
+• **Rahul Kumar, Ayush Rathore, Rajwinder Singh, Ajaz Ahmad Mir, Rupesh Kumar Tipu, Mahesh Patel.** Prognosis of flow of fly ash and blast furnace slag-based concrete: leveraging advanced machine learning algorithms. *Asian Journal of Civil Engineering*, SCOPUS, 2023.
+
+• **Rajwinder Singh, Rupesh Kumar Tipu, Ajaz Ahmad Mir, Mahesh Patel.** Predictive modelling of flexural strength in recycled aggregate-based concrete: machine learning and global sensitivity analysis. *Iranian Journal of Science and Technology*, SCI (IF 1.6), 2024.
+""")
 
 # ================= RESEARCH METRICS =================
 elif page == "📊 Research Metrics":
