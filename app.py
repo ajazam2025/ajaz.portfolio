@@ -205,15 +205,28 @@ Ph.D. Water Resources Engineering
 """)
 
 # ================= PUBLICATIONS =================
+# ================= PUBLICATIONS =================
 elif page == "📚 Publications":
 
     st.title("📚 Publications")
 
     st.markdown("""
-• **Ajaz Ahmad Mir, Mahesh Patel.** Optimizing bed shear stress prediction in open flow channels. *Natural Hazards*, 2025.
+• **Ajaz Ahmad Mir, Mahesh Patel.** Optimizing bed shear stress prediction in open flow channels: an investigation of heuristic machine learning techniques. *Natural Hazards*, SCI (IF 4.0), 2025.
 
-• **Ajaz Ahmad Mir et al.** Comparative ensemble approach to bedload prediction. *Scientific Reports*, 2024.
-""")
+• **Ajaz Ahmad Mir, Mahesh Patel, Fahad Albalawi, Mohit Bajaj, Milkias Berhanu Tuka.** A comparative ensemble approach to bedload prediction using metaheuristic machine learning. *Scientific Reports*, SCI (IF 4.3), 2024.
+
+• **Ajaz Ahmad Mir, Mahesh Patel.** Machine learning approaches for adequate prediction of flow resistance in alluvial channels with bedforms. *Water Science and Technology*, SCIE (IF 2.7), 2024.
+
+• **Ajaz Ahmad Mir, Mahesh Patel.** A comprehensive review on sediment transport, flow dynamics, and hazards in steep channels. *Journal of Water Management Modeling*, ESCI, 2024.
+
+• **Ajaz Ahmad Mir, Jasir Mushtaq, Abdul Qayoom Dar, Mahesh Patel.** A quantitative investigation of methane gas and solid waste management in mountainous Srinagar city — A case study. *Journal of Material Cycles and Waste Management*, SCI (IF 3.2), 2022.
+
+• **Akshita Bassi, Ajaz Ahmad Mir, Bimlesh Kumar, Mahesh Patel.** A comprehensive study of various regressions and deep learning approaches for prediction of friction factor in mobile bed channels. *Journal of Hydroinformatics*, SCI (IF 2.7), 2023.
+
+• **Rahul Kumar, Ayush Rathore, Rajwinder Singh, Ajaz Ahmad Mir, Rupesh Kumar Tipu, Mahesh Patel.** Prognosis of flow of fly ash and blast furnace slag-based concrete: leveraging advanced machine learning algorithms. *Asian Journal of Civil Engineering*, SCOPUS, 2023.
+
+• **Rajwinder Singh, Rupesh Kumar Tipu, Ajaz Ahmad Mir, Mahesh Patel.** Predictive modelling of flexural strength in recycled aggregate-based concrete: machine learning and global sensitivity analysis. *Iranian Journal of Science and Technology*, SCI (IF 1.6), 2024.
+    """)
 
 # ================= RESEARCH METRICS =================
 elif page == "📊 Research Metrics":
