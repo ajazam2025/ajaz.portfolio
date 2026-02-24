@@ -127,9 +127,10 @@ if page == "🏠 Home":
             <div class='about-text'>
             I am a Ph.D. researcher working in the field of <b>hydraulics,
             turbulence, and machine learning applications in water resources
-            engineering</b>. My research focuses on open channel flow,
-            sediment transport, bridge pier scour, and data-driven hydraulic
-            modelling.
+            engineering</b>. My research focuses on open channel flow, hydraulics, 
+            sediment transport, and data-driven hydraulic modelling in steep mountain channels.
+            I was also SERB/ANRF OVDF fellow at University of Alberta, Canada 
+            
             </div>
             """,
             unsafe_allow_html=True,
