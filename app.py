@@ -1,175 +1,169 @@
 import streamlit as st
 
-# ---------------- PAGE CONFIG ----------------
-st.set_page_config(
-    page_title="Ajaz Ahmad Mir",
-    page_icon="🎓",
-    layout="wide"
-)
+st.set_page_config(page_title="Ajaz Ahmad Mir", layout="wide")
 
-# ---------------- CUSTOM CSS ----------------
+# ---------------- STYLE ----------------
 st.markdown("""
 <style>
-
-.main-title{
-    font-size:40px;
-    font-weight:700;
-    color:white;
+.header{
+background:linear-gradient(90deg,#1e3c72,#2a5298);
+padding:25px;
+border-radius:10px;
+color:white;
 }
-
-.header-box{
-    background: linear-gradient(90deg,#2c7be5,#00bcd4);
-    padding:20px;
-    border-radius:10px;
+.section{
+background:#f4f6fb;
+padding:15px;
+border-radius:8px;
 }
-
-.profile-card{
-    background:#f5f7fa;
-    padding:20px;
-    border-radius:10px;
-}
-
-.section-box{
-    background:#eef3ff;
-    padding:15px;
-    border-radius:8px;
-}
-
-.section-title{
-    font-size:22px;
-    font-weight:600;
-}
-
 </style>
 """, unsafe_allow_html=True)
 
 # ---------------- HEADER ----------------
-st.markdown(
-"""
-<div class="header-box">
-<div class="main-title">Ajaz Ahmad Mir</div>
-PhD Research Scholar – Hydraulics & Water Resources Engineering
+st.markdown("""
+<div class='header'>
+<h1>Ajaz Ahmad Mir</h1>
+PhD Research Scholar — Water Resources Engineering
 </div>
-""",
-unsafe_allow_html=True
-)
+""", unsafe_allow_html=True)
 
-st.write("")
-
-# ---------------- PROFILE SECTION ----------------
-col1, col2 = st.columns([1,3])
+col1,col2 = st.columns([1,3])
 
 with col1:
     st.image("profile.png.png", width=200)
 
 with col2:
-    st.markdown(
-"""
-<div class="profile-card">
 
+    st.markdown("""
 **Institution:** Dr B R Ambedkar National Institute of Technology Jalandhar  
 
 📧 gid.ajaz@gmail.com  
-📱 +91-7006231956  
+📧 ajaz.2019mcivwr010@nitsri.net  
+📧 Ajazam.ce.21@nitj.ac.in  
+📧 ajaz1@ualberta.ca  
 
 🔗 [Google Scholar](https://scholar.google.ca/citations?user=90WNMHwAAAAJ)  
-🆔 [ORCID](https://orcid.org/0000-0002-4164-4027)
+🔗 [LinkedIn](https://www.linkedin.com/in/ajaz-mir-40342b1a8/)  
+🆔 ORCID: 0000-0002-4164-4027  
 
-</div>
-""",
-unsafe_allow_html=True
-)
+Scopus Author ID: 57219854867  
+Scopus Author ID: 58806681700
+""")
 
-st.write("")
+# ---------------- AREAS OF INTEREST ----------------
+st.subheader("🔬 Areas of Interest")
 
-# ---------------- ALWAYS VISIBLE SECTIONS ----------------
-
-colA, colB = st.columns(2)
-
-with colA:
-    st.markdown("### 🔬 Areas of Interest")
-    st.markdown("""
-<div class="section-box">
+st.markdown("""
+<div class='section'>
 
 • Experimental Hydraulics  
-• Turbulence in Open Channel Flow  
 • Sediment Transport  
+• Steep Channels  
+• Bedform Dynamics  
 • Machine Learning in Hydraulics  
-• Steep Mountain Channels  
 
 </div>
 """, unsafe_allow_html=True)
 
-with colB:
-    st.markdown("### 🌍 OVDF Fellowship")
-    st.markdown("""
-<div class="section-box">
+# ---------------- OVDF FELLOWSHIP ----------------
+st.subheader("🌍 Overseas Visiting Doctoral Fellowship")
+
+st.markdown("""
+<div class='section'>
 
 **Overseas Visiting Doctoral Fellow (OVDF)**  
 University of Alberta, Canada  
 
-Funded by **ANRF / SERB**
+Funded by **Science and Engineering Research Board (SERB / ANRF)**  
+Duration: Sept 2024 – Aug 2025  
 
-Research Collaboration on  
-Hydraulics, turbulence, and sediment transport modelling.
+Research collaboration on hydraulics, turbulence, and sediment transport modelling.
 
 </div>
 """, unsafe_allow_html=True)
 
-st.write("")
-
-# ---------------- OTHER COLLAPSIBLE SECTIONS ----------------
-
-with st.expander("🏆 Honors and Awards"):
+# ---------------- EMPLOYMENT ----------------
+with st.expander("Professional Background"):
     st.write("""
-• GATE Qualified (Score 463)  
-• ANRF / SERB Overseas Visiting Fellowship  
-• PhD Fellowship – NIT Jalandhar  
-• MTech GATE Fellowship – NIT Srinagar
-""")
-
-with st.expander("🎓 Educational Details"):
-    st.write("""
-**PhD – Water Resources Engineering**  
+Research Scholar  
 NIT Jalandhar (2022–Present)
 
-**MTech – Water Resource Engineering**  
+Visiting Scholar  
+University of Alberta, Canada (2024–2025)
+""")
+
+# ---------------- EDUCATION ----------------
+with st.expander("Educational Details"):
+    st.write("""
+MTech – Water Resource Engineering  
 NIT Srinagar (2019–2021)
 
-**B.E – Civil Engineering**  
+BE – Civil Engineering  
 University of Kashmir (2014–2019)
 """)
 
-with st.expander("📚 Journal Publications"):
+# ---------------- PUBLICATIONS ----------------
+with st.expander("Journal Publications"):
+
     st.write("""
-1. Mir AA, Patel M (2025) Optimizing bed shear stress prediction in open flow channels. *Natural Hazards*
+1. Mir AA, Patel M (2025)  
+Optimizing bed shear stress prediction in open flow channels.  
+Natural Hazards  
+DOI: https://doi.org/10.1007/s11069-025-07154-x  
 
-2. Mir AA et al. (2024) Comparative ensemble approach to bedload prediction. *Scientific Reports*
+2. Mir AA, Patel M (2024)  
+Machine learning approaches for prediction of flow resistance in alluvial channels with bedforms.  
+Water Science & Technology  
+DOI: https://doi.org/10.2166/wst.2023.396  
 
-3. Mir AA, Patel M (2024) Machine learning prediction of flow resistance in alluvial channels. *Water Science & Technology*
+3. Mir AA et al. (2024)  
+A comparative ensemble approach to bedload prediction using metaheuristic machine learning.  
+Scientific Reports  
+DOI: https://doi.org/10.1038/s41598-024-75118-5  
 
-4. Mir AA et al. (2022) Methane gas and solid waste management case study. *Journal of Material Cycles & Waste Management*
+4. Mir AA, Patel M (2024)  
+Sediment transport and hazards in steep channels.  
+Journal of Water Management Modeling  
+
+5. Bassi A, Mir AA, Kumar B, Patel M (2023)  
+Prediction of friction factor in mobile bed channels.  
+Journal of Hydroinformatics  
+DOI: https://doi.org/10.2166/hydro.2023.246  
+
+6. Tabassum T, Mir AA (2023)  
+3D printing technology for sustainable construction.  
+Materials Today: Proceedings  
+DOI: https://doi.org/10.1016/j.matpr.2023.08.013  
+
+7. Mir AA et al. (2023)  
+Methane gas and solid waste management in mountainous Srinagar city.  
+Journal of Material Cycles and Waste Management  
+DOI: https://doi.org/10.1007/s10163-022-01516-4  
+
+8. Kumar R et al. (2024)  
+Fly ash concrete modelling using machine learning.  
+Asian Journal of Civil Engineering  
+DOI: https://doi.org/10.1007/s42107-023-00922-9  
 """)
 
-with st.expander("🚀 Research Projects"):
+# ---------------- REVIEWER ACTIVITY ----------------
+with st.expander("Peer Review Activity"):
     st.write("""
-SPARC Project – AI/ML Flood Prediction in Himalayan Regions  
-Funding: ₹60 Lakhs
+Reviewer for the following journals:
+
+• Physics of Fluids  
+• Results in Engineering  
+• Cold Regions Science and Technology  
+• Biomass Conversion and Biorefinery  
+• Additive Manufacturing
 """)
 
-with st.expander("📖 Book Chapters"):
-    st.write("""
-• Technological Developments in River Morphology – Springer Nature (2025)  
-• Hydrogeological Study of Soil and Water Contamination (2025)
-""")
-
-# ---------------- CV DOWNLOAD ----------------
-
+# ---------------- CV ----------------
 st.subheader("📄 Curriculum Vitae")
 
 with open("ajaz_cv_2_page 30 dec 25.pdf","rb") as file:
     st.download_button(
-        label="⬇ Download CV",
+        label="Download CV",
         data=file,
         file_name="Ajaz_Ahmad_Mir_CV.pdf",
         mime="application/pdf"
