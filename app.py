@@ -24,7 +24,7 @@ margin-bottom:15px;
 st.markdown("""
 <div class='header'>
 <h1>Ajaz Ahmad Mir</h1>
-PhD Research Scholar — Water Resources Engineering
+PhD Research Scholar — Water Resources Engineering (OVDF fellow at University of Alberta, Canada)
 </div>
 """, unsafe_allow_html=True)
 
