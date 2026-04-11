@@ -119,6 +119,8 @@ University of Kashmir (2014–2019)
 with st.expander("Journal Publications"):
 
     st.write("""
+Mir, A. A., & Patel, M. (2026). A novel approch for predicting Friction factor in steep channels: An investigation into machine learning methodologies for complex phenomena. Water Resources Management.
+
 Mir, A. A., & Patel, M. (2025). Optimizing bed shear stress prediction in open flow channels. Natural Hazards.
 
 Mir, A. A., et al. (2024). A comparative ensemble approach to bedload prediction using metaheuristic machine learning. Scientific Reports.
